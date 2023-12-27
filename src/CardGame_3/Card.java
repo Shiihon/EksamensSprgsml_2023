@@ -3,7 +3,7 @@ package CardGame_3;
 public class Card {
 
     public enum Suits {
-        clubs, hearts, spades, diamonds;
+        clubs, diamonds, hearts, spades;
     }
 
     public enum Faces {

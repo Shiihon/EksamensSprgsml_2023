@@ -2,31 +2,34 @@ package CardGame_3;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Arrays;
+import java.util.Random;
 
 public class Deck {
-    List<Card> deckOfCards = new ArrayList<>();
+    private List<Card> deckOfCards = new ArrayList<>(); //refacturer senere (lav den om til private eller noget).
 
     public Deck() {
-        Card[] cards = new Card[52];
-
-        int counter = 0;
         for (Card.Suits suit : Card.Suits.values()) {
             for (int i = 1; i < 14; i++) {
-                cards[counter] = new Card(i,suit.name());
-                counter++;
+                deckOfCards.add(new Card(i, suit.name()));
             }
         }
-
-        System.out.println(Arrays.asList(cards));
     }
-       /* for( int i = 0; i < 53; i++){
-            int rank = 0;
-            String suit = " ";
-            Card card = new Card(rank, suit);
-        }*/
-    public void addCard(Card card){
+
+    public void addCard(Card card) {
         deckOfCards.add(card);
+    }
+
+    public void removeCard(Card card) {
+        deckOfCards.remove(card);
+    }
+
+    public Card getRandomCard() {
+        Random random = new Random();
+
+        int index = random.nextInt(deckOfCards.size());
+        Card drawnCard = deckOfCards.get(index);
+
+        return drawnCard;
     }
 }
 
