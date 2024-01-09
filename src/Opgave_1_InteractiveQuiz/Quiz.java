@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Quiz {
-    private List<QuizElement> quizElements = new ArrayList<>();
+    private List<QuizElement> quizElements = new ArrayList<>(); // indeholder et deck af spørgsmål.
     private Scanner scanner;
     private int pointCounter;
 
@@ -16,16 +16,16 @@ public class Quiz {
 
     public void askQuestion(QuizElement quizElement) {
 
-        System.out.println(quizElement);
-        System.out.print("Your answer : ");
+        System.out.println(quizElement); // printer QElementet ud.
+        System.out.print("Your answer : "); // fortæller brugeren hvor de kan skrive deres svar.
 
-        String input = scanner.nextLine();
+        String input = scanner.nextLine(); // gemmer brugerens input.
 
         System.out.println("You have answered : " + input);
 
         if (quizElement.isCorrect(input)) {
             System.out.println("Your guess is correct!");
-            pointCounter ++;
+            pointCounter++; // tilføjer point til hvert spørgsmål som er korrekt.
         } else {
             System.out.println("woops, maybe you'll get it right with the next question!");
         }
@@ -37,11 +37,7 @@ public class Quiz {
 
 
     public void playGame() {
-        /* for( int i = 0; i < quizElements.size(); i++) {
-            askQuestion(quizElements.get(i));
-        }*/
-
-        for (QuizElement quizElement : quizElements){
+        for (QuizElement quizElement : quizElements) {
             askQuestion(quizElement);
         }
         System.out.println("You have guessed " + pointCounter + " correct answer(s)! Well done!");

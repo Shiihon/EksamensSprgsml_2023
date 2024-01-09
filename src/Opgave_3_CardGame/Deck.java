@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 public class Deck {
-    private List<Card> deckOfCards = new ArrayList<>(); //refacturer senere (lav den om til private eller noget).
+    private List<Card> deckOfCards = new ArrayList<>();
 
     public Deck() {
         for (Card.Suits suit : Card.Suits.values()) { //hvor mange værdier jeg har i mit enum - 4 værdier, kører 4 gange.

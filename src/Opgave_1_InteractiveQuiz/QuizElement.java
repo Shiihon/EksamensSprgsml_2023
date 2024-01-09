@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class QuizElement {
+public class QuizElement { // mit kort, med spørgsmål og svar.
     private String question;
     private String correctAnswer;
     private List<String> wrongAnswers;
 
-    public QuizElement(String question, String correctAnswer, List<String> wrongAnswers) {
-        this.question = question;
+    public QuizElement(String question, String correctAnswer, List<String> wrongAnswers) { // parametre til at lave et QuizElement,
+        this.question = question; // initialiserer variablerne.
         this.correctAnswer = correctAnswer;
         this.wrongAnswers = wrongAnswers;
     }
@@ -27,7 +27,7 @@ public class QuizElement {
 
         choices.add(correctAnswer);
         choices.addAll(wrongAnswers); // addAll, tilføjer alt fra min liste til den nye liste.
-        Collections.shuffle(choices); // shuffler svarmulighederne.
+        Collections.shuffle(choices); // shuffler/blander svarmulighederne.
 
         String listOfChoices = "";
         for (String q : choices) {
@@ -38,11 +38,3 @@ public class QuizElement {
     }
 }
 
-/*
-String listOfChoices = "";
-int counter = 1;
-        for (String q : choices){
-listOfChoices +="["+counter +"] "+q +"\n";
-counter++;
-        }
- counter til svar mulighederne */

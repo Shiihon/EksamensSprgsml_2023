@@ -11,7 +11,7 @@ public class Main {
         System.out.println("Please choose a number between 1-30");
 
         try {
-            int choosenNumber = Integer.parseInt(scanner.nextLine());
+            int chosenNumber = Integer.parseInt(scanner.nextLine());
 
             System.out.println("Would you like to make a triangle or a square? T/S");
 
@@ -23,14 +23,14 @@ public class Main {
                 String choosenSide = scanner.nextLine();
 
                 if (choosenSide.equalsIgnoreCase("L")) {
-                    loops.drawLeftTriangle(choosenNumber);
+                    loops.drawLeftTriangle(chosenNumber);
                 } else {
-                    loops.drawRightTriangle(choosenNumber);
+                    loops.drawRightTriangle(chosenNumber);
                 }
             } else {
-                loops.drawSquare(choosenNumber);
+                loops.drawSquare(chosenNumber);
             }
-        } catch (NumberFormatException n){
+        } catch (NumberFormatException n) {
             System.out.println("Please try again!");
         }
 

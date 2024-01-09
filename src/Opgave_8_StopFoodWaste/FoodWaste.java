@@ -9,19 +9,19 @@ public class FoodWaste {
     public LocalDate dd;
 
     public FoodWaste() {
-        limits = new ArrayList<>();
+        limits = new ArrayList<>(); //initialiserer
 
-        limits.add(3);
-        limits.add(1);
-        limits.add(14);
-        limits.add(2);
-        limits.add(5);
+        limits.add(3); // frugt og grønt
+        limits.add(1); // kød
+        limits.add(14); // konserves
+        limits.add(2); // mejeriprodukter
+        limits.add(5); // mel og gryn
 
-        dd = LocalDate.of(2024, 1, 7);
+        dd = LocalDate.of(2024, 1, 7); // dags dato der bliver sat.
     }
 
     public boolean checkDate(int category, LocalDate saleByDate) {
-        LocalDate stopFoodWaste = saleByDate.minusDays(limits.get(category));
+        LocalDate stopFoodWaste = saleByDate.minusDays(limits.get(category)); // saleByDate minus limits dage for hver category.
 
         if (stopFoodWaste.isBefore(dd) || stopFoodWaste.isEqual(dd)){
             if(dd.isAfter(saleByDate)){

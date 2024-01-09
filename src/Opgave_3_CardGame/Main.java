@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        // Card
+        // Deck
+        // Game
+        // main
+
         Game game = new Game();
         Scanner scanner = new Scanner(System.in);
 

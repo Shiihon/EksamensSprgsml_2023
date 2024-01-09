@@ -22,7 +22,7 @@ public class Loops {
     public void drawSquare(int a) {
         StringBuilder str = new StringBuilder();
         String star = " * ";
-        str.append(star.repeat(a));
+        str.append(star.repeat(a)); // gentager samme karakter "a" antal gange.
 
         for (int i = 0; i < a; i++) {
             System.out.println(str);

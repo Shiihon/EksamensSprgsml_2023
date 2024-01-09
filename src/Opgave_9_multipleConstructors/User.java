@@ -6,7 +6,7 @@ public class User {
     private String email;
     private int phoneNumber;
 
-    public User(String name, String password) {
+    public User(String name, String password) { // method overload - vælger konstruktor der matcher de antal parametre.
         this.name = name;
         this.password = password;
     }

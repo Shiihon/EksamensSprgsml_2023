@@ -29,7 +29,7 @@ public class FlowerShop {
 
     public void showFlowers() {
         for (int i = 0; i < flowersInShop.size(); i++) {
-            System.out.println(i + 1 + "." + flowersInShop.get(i));
+            System.out.println((i + 1) + "." + flowersInShop.get(i));
         }
     }
 
